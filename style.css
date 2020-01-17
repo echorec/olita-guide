@@ -50,6 +50,11 @@ padding: 0 80px 50px 80px;
   padding-top: 40px;
 }
 
+.body-copy a {
+  color: black;
+  text-decoration: underline;
+}
+
 .sig img {
   width: 200px;
   display: block;
