@@ -11,11 +11,24 @@
 		<link rel="stylesheet" href="style.css">
 		 <base target=”_top”>
  <script src=”https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		
+									       <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+<script>
+  const scriptURL = '<https://script.google.com/macros/s/AKfycby2N9bGucpV32YyxVACvFnlZFg7jYsNZ7QdX8aUETteTh_0LWA/exec>'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+							  	
 	</head>
 	<body>
-		<script src="mailing.js"></script>
-		<script type="text/javascript"></script>
 		
 		<header>
 		  <h1>THE OLITA GUIDE</h1>
@@ -25,18 +38,10 @@
 		<br>
 		<br>
 		<br>
-		<form id="test-form">
-  <div>
-    <label>NAME</label>
-    <input type="text" name="form_field_1" placeholder="NAME"/>
-  </div>
-  <div>
-    <label>EMAIL ADDRESS</label>
-    <input type="text" name="form_field_2" placeholder="EMAIL ADDRESS"/>
-  </div>
-  <div>
-    <button type="submit"id="submit-form">Submit</button>
-  </div>
+		<form name="submit-to-google-sheet">
+  <input name="NAME" type="text" placeholder="NAME" required>
+  <input name="EMAIL" type="email" placeholder="email" required>  
+  <button type="submit">Send</button>
 </form>
 		<br>
 		<br>
