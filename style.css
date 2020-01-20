@@ -1,0 +1,242 @@
+@font-face {
+  font-family:   Spacemono Regular;
+  src: url(spacemono-regular.ttf);
+  font-family: Cutivemono Regular ;
+  src: url(cutivemono-regular.ttf);
+}
+body {
+	font-family: Arial;
+	background-color: #eeeeee;
+	color: #333333;
+	max-width: 1000px;
+  margin: auto;
+}
+#links2 {
+display: none;
+}
+.container{ 
+  transform: scale(0.8, 0.8);
+  -ms-transform: scale(0.8, 0.8); /* IE 9 */
+  -webkit-transform: scale(0.8, 0.8); /* Safari and Chrome */
+  -o-transform: scale(0.8, 0.8); /* Opera */
+  -moz-transform: scale(0.8, 0.8); /* Firefox */
+}
+.guide-row{
+  display: flex;
+   justify-content: space-between;
+  pointer-events: all;
+  
+
+}
+
+.links {
+  font-family: Helvetica;
+  font-weight: 700;
+  line-height: 1.7;
+   text-align: center;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+   justify-content: space-between;
+padding: 0 80px 50px 80px;
+  margin-top: -125px;
+}
+.links a {
+  font-family: cutivemono regular;
+  color: black;
+  text-decoration: underline;
+  text-align: center;
+}
+.body-copy {
+  font-family: Cutivemono Regular;
+ font-size: 1em;
+	line-height: 1.7;
+   margin: auto auto auto auto;
+  text-align: center;
+  padding-top: 40px;
+  max-width: 90vw;
+}
+.body-copy a {
+  color: black;
+  text-decoration: underline;
+}
+
+.sig img {
+  width: 200px;
+  display: block;
+  margin: auto auto 50px auto;
+  padding-top: 35px;
+  padding-bottom
+}
+h1 {
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom; 0px;
+  padding-left: 10px;
+   padding-right: 10px;
+  margin: auto auto -50px auto;
+  font-family: Helvetica;
+font-size: calc(1.3vw + 4vh + 2vmin);
+	font-weight: 700;
+}
+
+
+footer {
+  max-width: 1000px;
+  margin: auto;
+  font-family: Cutivemono Regular;
+  line-height: 2;
+  font-size: 12px;
+  padding-top: 40px;
+ display: flex;
+ justify-content: space-between;
+
+}
+
+footer div {
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  text-align: center;
+  font-size: 15px;
+  color: #000000;
+  text-decoration: underline;
+}
+
+
+
+
+
+    .is-hidden {
+      display: none !important;
+    }
+
+    @keyframes rotate {
+     100% { transform: rotate(360deg); }
+    }
+
+    @keyframes dash {
+     0% { stroke-dasharray: 1,200; stroke-dashoffset: 0; }
+     50% { stroke-dasharray: 89,200; stroke-dashoffset: -35; }
+     100% { stroke-dasharray: 89,200; stroke-dashoffset: -124; }
+    }
+
+.signup form {
+  padding-top: 40px;
+  max-width: 90vw;
+  margin: auto;
+  display: flex;
+    align-items: center;
+   justify-content: center;
+}
+
+@media (max-width:500px) {
+  .signup form input {
+    margin: 10px 0;
+  }
+  .body-copy {
+     max-width: 90vw;
+  }
+  .signup form, footer {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 80vw;
+  }
+}
+  @media (max-width:800px) {
+    .guide-row {
+      display: flex;
+       flex-direction: column !important;
+ 
+    } 
+  
+    .links {
+visibility: hidden;
+    }
+      #links2 {
+  font-family: Helvetica;
+  font-weight: 700;
+  line-height: 1.7;
+   text-align: center;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   justify-content: center;
+padding: 0 80px 50px 80px;
+  margin-top: -125px;
+}
+#links2 a {
+  font-family: cutivemono regular;
+  font-weight: 400;
+  color: #000;
+  text-decoration: underline;
+  text-align: center;
+}
+    .guide-row{
+      padding-top: 20px;
+    }
+ #links2 a {
+  pointer-events: all;
+}
+    .container{ 
+      margin-top: -60px;
+    
+}
+}
+  
+.signup input {
+  text-align: center;
+  font-family: cutivemono regular;
+  background-color: transparent;
+  border:2px solid black;
+  margin: 2.5px;
+  padding: 5px 5px 5px 10px;
+}
+.signup button {
+
+  text-align: center;
+  font-family: helvetica;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+  background-color: rgba(0, 0, 0, 0);
+  margin: 8px 8px 8px 5px;
+  border: none;
+  padding: 10px 5px 10px 5px;
+
+}
+    loading {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loading-spinner {
+      width: 50px;
+      height: 50px;
+    }
+
+    .loading-spinner svg {
+      position: relative;
+      animation: rotate 2s linear infinite;
+      height: 50px;
+      width: 50px;
+    }
+
+    .loading-spinner circle {
+      stroke: var(--accent);
+      stroke-dasharray: 1,200;
+      stroke-dashoffset: 0;
+      stroke-linecap: round;
+      animation: dash 1.5s ease-in-out infinite;
+    }
+
