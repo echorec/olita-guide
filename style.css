@@ -6,7 +6,7 @@
 }
 body {
 	font-family: Arial;
-	background-color: #eeeeee;
+	background-color: #EDEDED;
 	color: #333333;
 	max-width: 1000px;
   margin: auto;
@@ -44,7 +44,7 @@ padding: 0 80px 50px 80px;
 .links a {
   font-family: cutivemono regular;
   font-weight: 400;
-  color: #000;
+  color: #000ad6;
   text-decoration: underline;
   text-align: center;
 }
@@ -166,6 +166,7 @@ visibility: hidden;
     }
       #links2 {
   font-family: Helvetica;
+	 color: #000ad6;
   font-weight: 700;
   line-height: 1.7;
    text-align: center;
