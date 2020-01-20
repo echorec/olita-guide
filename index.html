@@ -5,20 +5,24 @@
 		<meta name="generator" content="SuperHi">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>3d books</title>
-		<link rel="stylesheet" href="base.css">
-		<link rel="stylesheet" href="books.css">
-		<link rel="stylesheet" href="style.css">
+		<title>The Olita Guide</title>
+		<link rel="stylesheet" href="/_base.css">
+		<link rel="stylesheet" href="/_fonts.css">
+		<link rel="stylesheet" href="/books.css">
+		<link rel="stylesheet" href="/style.css">
 	</head>
 	<body>
 		<script src="/superhi.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src= "links.js"> </script>
 		<header>
 		  <h1>THE OLITA GUIDE</h1>
 		</header>
 		
 		
+		
 		<section class="guide-row">
-		<div class="container">
+		<div class="container" id="book1">
 		    <div class="boockup">
 		      <div class="book-container">
 		        <div class="book-front"></div>
@@ -30,8 +34,11 @@
 		      </div>
 		    </div>
 		  </div>
-		  
-		  <div class="container">
+		  <div id="links2">
+		  1 MONTH IN MILAN <br>
+		   <a href="http://ivanolita.com/"> Download PDF</a> </div>
+		 
+		  <div class="container" id="book2">
 		    <div class="boockup">
 		      <div class="book-container">
 		        <div class="book-front"></div>
@@ -45,7 +52,12 @@
 		      </div>
 		    </div>
 		  </div>
-		    <div class="container">
+		<div id="links2">
+		 2 WEEKS IN LA <br>
+		   <a href="http://ivanolita.com/"> Download PDF</a> </div>
+		
+		
+		    <div class="container" id="book3">
 		    <div class="boockup">
 		      <div class="book-container">
 		        <div class="book-front"></div>
@@ -57,6 +69,9 @@
 		      </div>
 		    </div>
 		  </div>
+		<div id="links2">
+		 1 WEEK IN TOKYO <br>
+		   <a href="http://ivanolita.com/"> Download PDF</a> </div>
 		</section>
 		
 		<section class ="links">
@@ -66,15 +81,13 @@
 		  <div id="LA">
 		    2 WEEKS IN LA <br>
 		    <a href="http://ivanolita.com/"> Download PDF</a>
-		   
 		  </div>
 		<div id="Tokyo">
 		  1 WEEK IN TOKYO <br>
 		  <a href="http://ivanolita.com/"> Download PDF</a>
 		  </div>
-		
-		
 		</section>
+		 
 		<section class="body-copy">
 		  <p>
 		    Over the years I’ve developed a certain taste for foreign geographies and world cultures. The
@@ -83,7 +96,7 @@
 		    
 		  TOG may not be an exhaustive guide of everything to do in a city, but that's not what you’ve come here for. Instead, TOG is a living, community-inspired travel directive for those who know; my digital footprint around the world, offered as inspiration for your own journey. 
 		    <br><br>
-		    While the guide is free to download, it requires credentials to access. This is both out of respect to the locations it contains, and because the goal of TOG is to cultivate a select community of travelers who share a common spirit. If you don't have them, request access <a href="sign-up.html">here</a> and you'll recieve an email upon approval.<br> <br><br> Buon Viaggio,<br> Ivan Olita
+		    While the guide is free to download, it requires credentials to access. This is both out of respect to the locations it contains, and because the goal of TOG is to cultivate a select community of travelers who share a common spirit. If you don't have them, request access below and you'll recieve an email upon approval.<br> <br><br> Buon Viaggio,<br> Ivan Olita
 		  </p>
 		</section>
 		
@@ -91,14 +104,61 @@
 		  <img src="signature-converted.png"> 
 		</div>
 		</section>
+		
+		<section class="signup">
+		    <form>
+		      <input name="email" type="email" placeholder="EMAIL" required>
+		      <input name="fullname" type="text" placeholder="NAME">
+		      <button type="submit">REQUEST ACCESS</button>
+		    </form>
+		    <p class="js-success-message is-hidden">Success!</p>
+		    <p class="js-error-message is-hidden">Error!</p>
+		  </div>
+		  <script>
+		    const scriptURL = 'https://script.google.com/macros/s/AKfycby2N9bGucpV32YyxVACvFnlZFg7jYsNZ7QdX8aUETteTh_0LWA/exec'
+		    const form = document.forms['submit-to-google-sheet']
+		    const loading = document.querySelector('.js-loading')
+		    const successMessage = document.querySelector('.js-success-message')
+		    const errorMessage = document.querySelector('.js-error-message')
+		
+		    form.addEventListener('submit', e => {
+		      e.preventDefault()
+		      showLoadingIndicator()
+		      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+		        .then(response => showSuccessMessage(response))
+		        .catch(error => showErrorMessage(error))
+		    })
+		
+		    function showLoadingIndicator () {
+		      form.classList.add('is-hidden')
+		      loading.classList.remove('is-hidden')
+		    }
+		
+		    function showSuccessMessage (response) {
+		      console.log('Success!', response)
+		      setTimeout(() => {
+		        successMessage.classList.remove('is-hidden')
+		        loading.classList.add('is-hidden')
+		      }, 500)
+		    }
+		
+		    function showErrorMessage (error) {
+		      console.error('Error!', error.message)
+		      setTimeout(() => {
+		        errorMessage.classList.remove('is-hidden')
+		        loading.classList.add('is-hidden')
+		      }, 500)
+		    }
+		  </script>
+		</section>
 		<footer>
-		  <div>
+		  <div id=f1>
 		      <a href="http://ivanolita.com/"> EMAIL</a><br> SHARE YOUR FEEDBACK
 		  </div>
-		    <div>
+		 <div id=f2>
 		   <a href="http://ivanolita.com/">WEBSITE</a> <br> CHECK OUT MY WORK
 		    </div>
-		    <div>
+		 <div id=f3>
 		<a href="https://www.instagram.com/theolita.guide/">INSTAGRAM</a> <br> FAMILIARIZE YOURSELF
 		    </div>
 		</footer>
