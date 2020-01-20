@@ -137,6 +137,13 @@ footer a {
   .signup form input {
     margin: 10px 0;
 	  border-radius:0px;
+	   text-align: center;
+  font-family: cutivemono regular;
+  background-color: transparent;
+  border:2px solid black;
+  margin: 2.5px;
+  padding: 5px 5px 5px 10px;
+	 
   }
   .body-copy {
      max-width: 90vw;
