@@ -111,8 +111,22 @@
   background-repeat: repeat;
   background-position: top left;
 }
-.book-front {
-  background-image: url(book-cover.jpg);
+.book-front1 {
+  background-image: url(tog-milano.jpg);
+  width: 298px;
+  height: 394px;
+  -webkit-transform: translate3d(-149px ,-197px ,29px) translate3d(0,0,0) rotateY(0deg);
+  transform: translate3d(-149px ,-197px ,29px) translate3d(0,0,0) rotateY(0deg);
+}
+.book-front2 {
+  background-image: url(tog-la.jpg);
+  width: 298px;
+  height: 394px;
+  -webkit-transform: translate3d(-149px ,-197px ,29px) translate3d(0,0,0) rotateY(0deg);
+  transform: translate3d(-149px ,-197px ,29px) translate3d(0,0,0) rotateY(0deg);
+}
+.book-front3 {
+  background-image: url(tog-tokyo-1-1-.jpg);
   width: 298px;
   height: 394px;
   -webkit-transform: translate3d(-149px ,-197px ,29px) translate3d(0,0,0) rotateY(0deg);
